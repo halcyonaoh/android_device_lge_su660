@@ -58,6 +58,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.config.low_ram=true \
   dalvik.vm.jit.codecachesize=0
 
+# force transparent statusbar
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.force_transbar=true
+
 # Disable SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.boot.selinux=disabled \
