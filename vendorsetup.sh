@@ -14,16 +14,15 @@
 # limitations under the License.
 #
 
-add_lunch_combo slim_p990-userdebug
-add_lunch_combo cm_p990-userdebug
+add_lunch_combo cm_su660-userdebug
 
 echo ""
-echo "Applying patches for P990"
+echo "Applying patches for SU660"
 echo ""
 
 echo "Apply patch to frameworks/base"
 echo -n "Apply patch 0001-framework-base-patch.patch"
-(cd frameworks/base; git am ../../device/lge/p990/patches/0001-framework-base-patch.patch) > /dev/null 2>&1
+(cd frameworks/base; git am ../../device/lge/su660/patches/0001-framework-base-patch.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
        echo "     [DONE]"
 else
@@ -33,7 +32,7 @@ fi
 
 echo "Apply patch to frameworks/native"
 echo -n "Apply patch 0001-Fix-layer-dump-for-tegra2.patch"
-(cd frameworks/native; git am ../../device/lge/p990/patches/0001-Fix-layer-dump-for-tegra2.patch) > /dev/null 2>&1
+(cd frameworks/native; git am ../../device/lge/su660/patches/0001-Fix-layer-dump-for-tegra2.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
        echo "     [DONE]"
 else
@@ -43,7 +42,7 @@ fi
 
 echo "Apply patch to frameworks/av"
 echo -n "Apply patch 0001-ifdef-for-ICS-Audio-Blob-compatibility.patch"
-(cd frameworks/av; git am ../../device/lge/p990/patches/0001-ifdef-for-ICS-Audio-Blob-compatibility.patch) > /dev/null 2>&1
+(cd frameworks/av; git am ../../device/lge/su660/patches/0001-ifdef-for-ICS-Audio-Blob-compatibility.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else
@@ -52,7 +51,7 @@ else
 fi
 
 echo -n "Apply patch 0002-Add-missing-functions-and-signatures-for-older-OMX-v.patch"
-(cd frameworks/av; git am ../../device/lge/p990/patches/0002-Add-missing-functions-and-signatures-for-older-OMX-v.patch) > /dev/null 2>&1
+(cd frameworks/av; git am ../../device/lge/su660/patches/0002-Add-missing-functions-and-signatures-for-older-OMX-v.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else
@@ -62,7 +61,7 @@ fi
 
 echo "Apply patch to external/skia"
 echo -n "Apply patch 0001-external-skia-patch.patch"
-(cd external/skia; git am ../../device/lge/p990/patches/0001-external-skia-patch.patch) > /dev/null 2>&1
+(cd external/skia; git am ../../device/lge/su660/patches/0001-external-skia-patch.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else
@@ -71,7 +70,7 @@ else
 fi
 echo "Apply patch to bionic"
 echo -n "Apply patch 0003-Add-tegra2-to-bionic.patch"
-(cd bionic; git am ../device/lge/p990/patches/0003-Add-tegra2-to-bionic.patch) > /dev/null 2>&1
+(cd bionic; git am ../device/lge/su660/patches/0003-Add-tegra2-to-bionic.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else
@@ -81,7 +80,7 @@ fi
 
 echo "Apply patch to external/chromium_org"
 echo -n "Apply patch 0001-Work-around-broken-GL_TEXTURE_BINDING_EXTERNAL_OES-q.patch"
-(cd external/chromium_org; git am ../../device/lge/p990/patches/0001-Work-around-broken-GL_TEXTURE_BINDING_EXTERNAL_OES-q.patch) > /dev/null 2>&1
+(cd external/chromium_org; git am ../../device/lge/su660/patches/0001-Work-around-broken-GL_TEXTURE_BINDING_EXTERNAL_OES-q.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else
@@ -91,7 +90,7 @@ fi
 
 echo "Apply patch to hardware/libhardware"
 echo -n "Apply patch 0001-Star-audio-patch.patch"
-(cd hardware/libhardware; git am ../../device/lge/p990/patches/0001-Star-audio-patch.patch) > /dev/null 2>&1
+(cd hardware/libhardware; git am ../../device/lge/su660/patches/0001-Star-audio-patch.patch) > /dev/null 2>&1
 if [ $? == 0 ]; then
 	echo "     [DONE]"
 else

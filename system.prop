@@ -1,5 +1,5 @@
 #
-# system.prop for p990
+# system.prop for su660
 #
 rild.libpath=/system/lib/liblgeril.so
 rild.libargs=-d /dev/ttyspi0

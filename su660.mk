@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS += device/lge/p990/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/su660/overlay
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
@@ -110,17 +110,17 @@ PRODUCT_MANUFACTURER := LGE
 $(call inherit-product, device/common/gps/gps_eu.mk)
 
 # Inherit non-open-source blobs.
-$(call inherit-product, vendor/lge/p990/p990-vendor.mk)
+$(call inherit-product, vendor/lge/su660/su660-vendor.mk)
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/lge/p990/init.p990.rc:root/init.star.rc \
+    device/lge/su660/init.su660.rc:root/init.star.rc \
     $(LOCAL_PATH)/ueventd.tegra.rc:root/ueventd.star.rc \
     $(LOCAL_PATH)/fstab.star:root/fstab.star
 
 # TWRP
 PRODUCT_COPY_FILES += \
-    device/lge/p990/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/lge/su660/twrp.fstab:recovery/root/etc/twrp.fstab
 
 
 PRODUCT_COPY_FILES += \
@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lgdrm.img:system/bin/lgdrm.img
 
 # prebuilt kernel stuff
-LOCAL_KERNEL := device/lge/p990/kernel/zImage
+LOCAL_KERNEL := device/lge/su660/kernel/zImage
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
@@ -161,6 +161,6 @@ PRODUCT_PACKAGES += \
 WIFI_BAND := 802_11_BG
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
-PRODUCT_NAME := full_p990
-PRODUCT_DEVICE := p990
-PRODUCT_MODEL := LG-P990
+PRODUCT_NAME := full_su660
+PRODUCT_DEVICE := su660
+PRODUCT_MODEL := LG-SU660

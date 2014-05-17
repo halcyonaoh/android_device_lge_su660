@@ -1,7 +1,7 @@
-LOCAL_PATH := device/lge/p990
-TARGET_SPECIFIC_HEADER_PATH := device/lge/p990/include
+LOCAL_PATH := device/lge/su660
+TARGET_SPECIFIC_HEADER_PATH := device/lge/su660/include
 TARGET_OVERLAY_ALWAYS_DETERMINES_FORMAT := true
-#TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/lge/p990/releasetools/p990-newbl_ota_from_target_files
+#TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/lge/su660/releasetools/su660-newbl_ota_from_target_files
 
 USE_SET_METADATA := false
 
@@ -22,7 +22,7 @@ TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_HIGH_OPTIMIZATION := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
-TARGET_BOOTLOADER_BOARD_NAME := p990
+TARGET_BOOTLOADER_BOARD_NAME := su660
 
 # filesystem
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
@@ -41,10 +41,10 @@ BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_PAGE_SIZE := 0x00000800
 #TARGET_KERNEL_SOURCE := kernel/lge/star
-#TARGET_KERNEL_CONFIG := cyanogenmod_p990_defconfig
+#TARGET_KERNEL_CONFIG := cyanogenmod_su660_defconfig
 
 # prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/lge/p990/kernel/zImage
+TARGET_PREBUILT_KERNEL := device/lge/su660/kernel/zImage
 
 # wifi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -61,9 +61,9 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 # bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/p990/config/bluetooth/vnd_star.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p990/config/bluetooth
-BOARD_BLUETOOTH_LIBBT_VNDCFG := device/lge/p990/config/bluetooth/bt_vendor.conf
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/su660/config/bluetooth/vnd_star.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/su660/config/bluetooth
+BOARD_BLUETOOTH_LIBBT_VNDCFG := device/lge/su660/config/bluetooth/bt_vendor.conf
 TARGET_NEEDS_BLUETOOTH_INIT_DELAY := true
 
 # audio
@@ -82,7 +82,7 @@ USE_OPENGL_RENDERER := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 # egl
-BOARD_EGL_CFG := device/lge/p990/egl.cfg
+BOARD_EGL_CFG := device/lge/su660/egl.cfg
 BOARD_EGL_NEEDS_FNW := true
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
@@ -95,29 +95,29 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 #BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := p990
+TARGET_OTA_ASSERT_DEVICE := su660
 
 # ril
-BOARD_RIL_CLASS := ../../../device/lge/p990/ril/
+BOARD_RIL_CLASS := ../../../device/lge/su660/ril/
 BOARD_MOBILEDATA_INTERFACE_NAME := "vsnet0"
 
 # recovery
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/fsl-tegra-udc/gadget/lun%d/file"
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/setup-recovery"
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/lge/p990/fstab.star
+TARGET_RECOVERY_FSTAB := device/lge/su660/fstab.star
 RECOVERY_FSTAB_VERSION := 2
 
 # sensors
 BOARD_SYSFS_LIGHT_SENSOR := "/sys/class/backlight/aat2870-backlight/brightness_mode"
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/p990/vibrator.c
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/lge/su660/vibrator.c
 
 # var
 TARGET_ARCH_LOWMEM := true
 HAVE_SELINUX := false
 
 # TWRP
-TARGET_RECOVERY_INITRC := device/lge/p990/init.recovery.rc
+TARGET_RECOVERY_INITRC := device/lge/su660/init.recovery.rc
 TW_BRIGHTNESS_PATH := /sys/class/backlight/aat2870-backlight/brightness
 DEVICE_RESOLUTION := 480x800
 TW_INTERNAL_STORAGE_PATH := "/sdcard"
@@ -128,7 +128,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 # Avoid the generation of ldrcc instructions
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
-BOARD_HARDWARE_CLASS := device/lge/p990/cmhw/
+BOARD_HARDWARE_CLASS := device/lge/su660/cmhw/
 
 BOARD_MALLOC_ALIGNMENT := 16
 TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
